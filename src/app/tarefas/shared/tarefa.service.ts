@@ -32,7 +32,8 @@ export class TarefaService {
       if (tarefa.id === obj.id) {
         objs[index] = tarefa;
       }
-    })
+    });
+    localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
   remover(id: number): void {
